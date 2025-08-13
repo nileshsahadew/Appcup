@@ -19,7 +19,6 @@ export default function Home() {
   const [inputMessage, setInputMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-
   const handleSendMessage = async () => {
     // Prevent sending empty messages or while loading
     if (inputMessage.trim() === "" || isLoading) return;
