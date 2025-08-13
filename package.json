@@ -6,14 +6,21 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "ingest": "node src/ingest_local.mjs",
+    "ingest-chroma": "node src/ingest.mjs",
+    "ingest-local": "node src/ingest_local.mjs",
+    "query": "node src/query.mjs"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@google/generative-ai": "^0.24.1",
     "@mui/icons-material": "^7.3.1",
     "@mui/material": "^7.3.1",
     "@mui/styled-engine-sc": "^7.3.1",
+    "chromadb": "^3.0.11",
+    "dotenv": "^17.2.1",
     "next": "15.4.6",
     "react": "19.1.0",
     "react-dom": "19.1.0",
