@@ -1,5 +1,6 @@
 import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
 import { HumanMessage, AIMessage } from "@langchain/core/messages";
+import { retrieveTopK, formatContextForPrompt } from "@/src/lib/retrieval.mjs";
 
 export const runtime = "edge";
 
@@ -17,7 +18,6 @@ export async function POST(req) {
     });
 
     // Instantiate the GoogleGenerativeAI model.
-    // In a real-world scenario, you would use process.env.GEMINI_API_KEY
     const model = new ChatGoogleGenerativeAI({
       apiKey: process.env.GEMINI_API_KEY, // Replace with your API key or environment variable
       model: "gemini-2.5-flash-preview-05-20",
@@ -25,9 +25,20 @@ export async function POST(req) {
       streaming: true,
     });
 
-    // Use the LangChain model's stream method to get a streaming response.
-    // The model will automatically handle the chat history you provide.
-    const stream = await model.stream(mappedHistory);
+    // Retrieve top-K context from Qdrant and prepend as system message
+    const retrieved = await retrieveTopK(message, 5);
+    const contextBlock = formatContextForPrompt(retrieved);
+
+    const systemPreamble = new AIMessage({
+      content:
+        (contextBlock
+          ? `Use the following context to answer. If context is insufficient, say so.
+Context:\n${contextBlock}`
+          : "No external context available. Answer concisely.") +
+        "\nAlways provide short, factual answers.\n",
+    });
+
+    const stream = await model.stream([systemPreamble, ...mappedHistory, new HumanMessage({ content: message })]);
 
     // We can then pipe the LangChain stream directly to a new Response object.
     const textEncoder = new TextEncoder();

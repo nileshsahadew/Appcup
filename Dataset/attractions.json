@@ -1,0 +1,1060 @@
+{
+  "attractions": [
+    {
+      "id": "attraction_ile_aux_cerfs",
+      "name": "Île aux Cerfs",
+      "attraction_type": "island",
+      "description": "A popular islet off the east coast, known for its white-sand beaches, water sports, and vibrant marine life. Accessible by boat from Trou d'Eau Douce.",
+      "tags": ["beach", "water sports", "island", "snorkeling", "scenic"],
+      "audience_popularity": {
+        "locals": "high",
+        "tourists": "high"
+      },
+      "location": {
+        "address": "Trou d'Eau Douce, Mauritius",
+        "latitude": -20.267,
+        "longitude": 57.738,
+        "region": "East"
+      },
+      "prerequisites": {
+        "tour_guide_required": false,
+        "booking_required": false,
+        "fee_required": false,
+        "entry_points": [
+          {
+            "name": "Boat from Trou d'Eau Douce",
+            "latitude": -20.267,
+            "longitude": 57.735,
+            "access_notes": "Boat launches from the eastern shore; public pickup boats available."
+          }
+        ],
+        "notes": "Day trips commonly arranged; bring sun protection."
+      },
+      "reviews": [
+        {
+          "source": "TripAdvisor",
+          "url": "https://www.tripadvisor.com/Attraction_Review-g293816-d477276-Reviews-Ile_aux_Cerfs-Mauritius.html",
+          "rating": "4.1/5 stars",
+          "reviewCount": 7304,
+          "summary": "A picturesque paradise with clear waters and fun water activities, but can be crowded during peak hours."
+        }
+      ],
+      "additional_info": {
+        "notes": "Ideal for snorkeling and relaxation; vendors available, bring cash.",
+        "advisories": {
+          "safety": "Stay hydrated; boat transit subject to sea conditions.",
+          "travel": "Accessible only by sea; plan return times."
+        }
+      },
+      "sub_attractions": []
+    },
+    {
+      "id": "attraction_blue_bay_marine_park",
+      "name": "Blue Bay Marine Park",
+      "attraction_type": "marine_park",
+      "description": "Protected marine park with vibrant coral reefs, ideal for snorkeling, glass-bottom boats, and swimming in crystal-clear waters.",
+      "tags": ["marine park", "snorkeling", "reef", "protected", "nature"],
+      "audience_popularity": {
+        "locals": "high",
+        "tourists": "high"
+      },
+      "location": {
+        "address": "Blue Bay, Mauritius",
+        "latitude": -20.413,
+        "longitude": 57.741,
+        "region": "Southeast"
+      },
+      "prerequisites": {
+        "tour_guide_required": false,
+        "booking_required": false,
+        "fee_required": true,
+        "entry_points": [
+          {
+            "name": "Main Beach Entrance",
+            "latitude": -20.413,
+            "longitude": 57.741,
+            "access_notes": "Entrance via Blue Bay beach; snorkel gear rentals available."
+          }
+        ],
+        "notes": "Entry fee required for protected zone."
+      },
+      "reviews": [
+        {
+          "source": "TripAdvisor",
+          "url": "https://www.tripadvisor.com/Attraction_Review-g481079-d3984763-Reviews-Blue_Bay_Marine_Park-Mahebourg.html",
+          "rating": "4.1/5 stars",
+          "reviewCount": 540,
+          "summary": "Incredible coral reefs and clear waters; perfect for snorkeling and calm swims."
+        }
+      ],
+      "additional_info": {
+        "notes": "Bring reef-safe sunscreen; rentals may book out.",
+        "advisories": {
+          "safety": "Watch for changing currents.",
+          "travel": "Parking limited on weekends."
+        }
+      },
+      "sub_attractions": []
+    },
+    {
+      "id": "attraction_grand_river_se_waterfall",
+      "name": "Grand River South East Waterfall",
+      "attraction_type": "waterfall",
+      "description": "Serene waterfall on the southeast coast, reachable by small boat ride; surrounded by lush forest and dramatic cliffs.",
+      "tags": ["waterfall", "nature", "scenic", "boat ride"],
+      "audience_popularity": {
+        "locals": "moderate",
+        "tourists": "high"
+      },
+      "location": {
+        "address": "Grand River South East, Mauritius",
+        "latitude": -20.348,
+        "longitude": 57.780,
+        "region": "Southeast"
+      },
+      "prerequisites": {
+        "tour_guide_required": false,
+        "booking_required": false,
+        "fee_required": false,
+        "entry_points": [
+          {
+            "name": "Boat Launch Site",
+            "latitude": -20.348,
+            "longitude": 57.780,
+            "access_notes": "Short boat ride required to view waterfall."
+          }
+        ],
+        "notes": "Best accessed via boat tours."
+      },
+      "reviews": [
+        {
+          "source": "TripAdvisor",
+          "url": "https://www.tripadvisor.com/Attraction_Review-g1152294-d14154187-Reviews-Grand_River_South_East_Waterfalls-Beau_Champ.html",
+          "rating": "4.1/5 stars",
+          "reviewCount": 43,
+          "summary": "Picturesque setting reached by boat; peaceful and less crowded."
+        }
+      ],
+      "additional_info": {
+        "notes": "Bring mosquito repellant; shore terrain can be slippery.",
+        "advisories": {
+          "safety": "Slippery boat edges; wear proper footwear.",
+          "travel": "Small boats; schedule may vary with tides."
+        }
+      },
+      "sub_attractions": []
+    },
+    {
+      "id": "attraction_vallee_de_ferney",
+      "name": "Vallée de Ferney Nature Reserve",
+      "attraction_type": "nature_reserve",
+      "description": "Forest and wildlife reserve north of Mahébourg; home to indigenous forests, endemic plants and animals, with hiking circuits and lookout points.",
+      "tags": ["nature", "hiking", "forest", "wildlife", "endemic"],
+      "audience_popularity": {
+        "locals": "low",
+        "tourists": "moderate"
+      },
+      "location": {
+        "address": "Bambou Mountains, north of Mahébourg, Mauritius",
+        "latitude": -20.356,
+        "longitude": 57.712,
+        "region": "Southeast"
+      },
+      "prerequisites": {
+        "tour_guide_required": false,
+        "booking_required": false,
+        "fee_required": true,
+        "entry_points": [
+          {
+            "name": "Reserve Entrance",
+            "latitude": -20.356,
+            "longitude": 57.712,
+            "access_notes": "Hiking trails begin here; guided visits available."
+          }
+        ],
+        "notes": "Photography permitted; fauna sanctuary with limited facilities."
+      },
+      "reviews": [
+        {
+          "source": "TripAdvisor",
+          "url": "https://www.tripadvisor.com/Attraction_Review-g481079-d4006157-Reviews-La_Vallee_de_Ferney-Mahebourg.html",
+          "rating": "4.4/5 stars",
+          "reviewCount": 150,
+          "summary": "A rare forest reserve near Mahébourg with indigenous wildlife, hiking circuits and conservation efforts."
+        }
+      ],
+      "additional_info": {
+        "notes": "Experienced hikers recommended; bring water and walk carefully.",
+        "advisories": {
+          "safety": "Trail uneven; watch footing.",
+          "travel": "Access by car; limited signage."
+        }
+      },
+      "sub_attractions": []
+    },
+    {
+      "id": "attraction_ile_aux_aigrettes",
+      "name": "Île aux Aigrettes",
+      "attraction_type": "nature_reserve_islet",
+      "description": "Coral-island nature reserve off Mahébourg, home to rare endemic species including giant tortoises and restored dry coastal forest.",
+      "tags": ["nature", "reserve", "wildlife", "endemic", "islet"],
+      "audience_popularity": {
+        "locals": "moderate",
+        "tourists": "moderate"
+      },
+      "location": {
+        "address": "Grand Port Bay, off Mahébourg, Mauritius",
+        "latitude": -20.380,
+        "longitude": 57.722,
+        "region": "Southeast"
+      },
+      "prerequisites": {
+        "tour_guide_required": true,
+        "booking_required": true,
+        "fee_required": true,
+        "entry_points": [
+          {
+            "name": "Boat departure from Mahébourg",
+            "latitude": -20.385,
+            "longitude": 57.718,
+            "access_notes": "Access by guided boat tours only."
+          }
+        ],
+        "notes": "Reserve visits must be booked in advance."
+      },
+      "reviews": [
+        {
+          "source": "TripAdvisor",
+          "url": "https://www.tripadvisor.com/Attraction_Review-g293816-d477982-Reviews-Ile_aux_Aigrettes_Nature_Reserve-Mauritius.html",
+          "rating": "4.6/5 stars",
+          "reviewCount": 655,
+          "summary": "An islet nature reserve protecting dry coastal forest and endemic species, managed by conservation groups."
+        }
+      ],
+      "additional_info": {
+        "notes": "Ideal for nature lovers; conservation-focused tours.",
+        "advisories": {
+          "safety": "Boat rides; uneven terrain on site.",
+          "travel": "Booking required; limited daily tours."
+        }
+      },
+      "sub_attractions": []
+    },
+    {
+      "id": "attraction_mahebourg_waterfront",
+      "name": "Mahébourg Waterfront & Naval Museum",
+      "attraction_type": "museum_coastal_walk",
+      "description": "Historic coastal town with a scenic waterfront promenade and the National History Museum (Naval Museum) recounting Mauritius' naval and colonial past.",
+      "tags": ["museum", "history", "coastal walk", "colonial"],
+      "audience_popularity": {
+        "locals": "moderate",
+        "tourists": "moderate"
+      },
+      "location": {
+        "address": "Mahébourg, Grand Port District, Mauritius",
+        "latitude": -20.408,
+        "longitude": 57.706,
+        "region": "Southeast"
+      },
+      "prerequisites": {
+        "tour_guide_required": false,
+        "booking_required": false,
+        "fee_required": true,
+        "entry_points": [
+          {
+            "name": "Museum Entrance",
+            "latitude": -20.409,
+            "longitude": 57.706,
+            "access_notes": "Accessible via waterfront; parking available near."
+          }
+        ],
+        "notes": "Museum open daily; beachside walk free of charge."
+      },
+      "reviews": [
+        {
+          "source": "TripAdvisor",
+          "url": "https://www.tripadvisor.com/Attraction_Review-g481079-d10130872-Reviews-Mahebourg_Waterfront-Mahebourg.html",
+          "rating": "3.9/5 stars",
+          "reviewCount": 189,
+          "summary": "Mahébourg features a historical naval museum and a scenic waterfront—reflects the town's colonial architecture and maritime history."
+        }
+      ],
+      "additional_info": {
+        "notes": "Nice combination of culture and relaxation.",
+        "advisories": {
+          "safety": "Standard museum safety guidelines apply.",
+          "travel": "Town can get busy market days; parking may be tight."
+        }
+      },
+      "sub_attractions": []
+    },
+    {
+      "id": "attraction_pointe_du_diable",
+      "name": "Pointe du Diable",
+      "attraction_type": "scenic_spot",
+      "description": "A picturesque coastal spot with views over mangroves and lagoon; a quiet place to watch local fishermen and enjoy nature.",
+      "tags": ["coastal", "scenic", "lagoon", "fishing", "quiet"],
+      "audience_popularity": {
+        "locals": "low",
+        "tourists": "low"
+      },
+      "location": {
+        "address": "Vieux Grand Port area, Mauritius",
+        "latitude": -20.408,
+        "longitude": 57.708,
+        "region": "Southeast"
+      },
+      "prerequisites": {
+        "tour_guide_required": false,
+        "booking_required": false,
+        "fee_required": false,
+        "entry_points": [
+          {
+            "name": "Coastal access",
+            "latitude": -20.408,
+            "longitude": 57.708,
+            "access_notes": "No infrastructure; natural setting."
+          }
+        ],
+        "notes": "Rustic, off-the-beaten-path, best visited at sunset."
+      },
+      "reviews": [
+        {
+          "source": "TripAdvisor",
+          "url": "https://www.tripadvisor.com/Attraction_Review-g8791755-d14962936-Reviews-Pointe_du_diable-Vieux_Grand_Port.html",
+          "rating": "2.5/5 stars",
+          "reviewCount": 2,
+          "summary": "Situated on the south of Mauritius, a scenic spot north of Mahébourg popular among locals.Historic place along the coastal highway between Bamboux Virieux and Le Sable, it is a meadow with a historic muzzle and a few cannons"
+        }
+      ],
+      "additional_info": {
+        "notes": "Great for sunsets and quiet reflection; bring water.",
+        "advisories": {
+          "safety": "Watch footing on rocky shoreline.",
+          "travel": "No formal parking or facilities."
+        }
+      },
+      "sub_attractions": []
+    },
+    {
+      "id": "attraction_frederik_hendrik_museum",
+      "name": "Frederik Hendrik Museum",
+      "attraction_type": "museum",
+      "description": "Museum at the site of ruins from the first Dutch settlement, showcasing artifacts and exhibits from Dutch and French colonial periods.",
+      "tags": ["history", "museum", "colonial", "ruins"],
+      "audience_popularity": {
+        "locals": "low",
+        "tourists": "moderate"
+      },
+      "location": {
+        "address": "Vieux Grand Port, Mauritius",
+        "latitude": -20.408,
+        "longitude": 57.710,
+        "region": "Southeast"
+      },
+      "prerequisites": {
+        "tour_guide_required": false,
+        "booking_required": false,
+        "fee_required": false,
+        "entry_points": [
+          {
+            "name": "Museum Gate",
+            "latitude": -20.408,
+            "longitude": 57.710,
+            "access_notes": "Located near the village; guided tours available."
+          }
+        ],
+        "notes": "Free admission; minimal facilities."
+      },
+      "reviews": [
+        {
+          "source": "TripAdvisor",
+          "url": "https://www.tripadvisor.com/Attraction_Review-g8791755-d1775226-Reviews-Frederik_Hendrik_Museum_Vieux_Grand_Port_Historic_Site-Vieux_Grand_Port.html",
+          "rating": "3.7/5 stars",
+          "reviewCount": 22,
+          "summary": "Visitors reflect on early Dutch seamen encounters and archaeological discoveries including dodo bones."
+        }
+      ],
+      "additional_info": {
+        "notes": "Great for history buffs; quiet and reflective experience.",
+        "advisories": {
+          "safety": "Standard museum safety guidelines apply.",
+          "travel": "Access by car; limited signage."
+        }
+      },
+      "sub_attractions": []
+    },
+    {
+      "id": "attraction_dutch_first_landing",
+      "name": "Dutch First Landing Monument",
+      "attraction_type": "historical_site",
+      "description": "Monument marking the first Dutch landing in Mauritius; situated on the coast near Ferney.",
+      "tags": ["historical", "monument", "coastal", "colonial"],
+      "audience_popularity": {
+        "locals": "low",
+        "tourists": "low"
+      },
+      "location": {
+        "address": "Royal Rd, Ferney, Mauritius",
+        "latitude": -20.380,
+        "longitude": 57.715,
+        "region": "Southeast"
+      },
+      "prerequisites": {
+        "tour_guide_required": false,
+        "booking_required": false,
+        "fee_required": false,
+        "entry_points": [
+          {
+            "name": "Monument site",
+            "latitude": -20.380,
+            "longitude": 57.715,
+            "access_notes": "Walk-up; no facilities."
+          }
+        ],
+        "notes": "Commemorative plaque and coastal views."
+      },
+      "reviews": [
+        {
+          "source": "Google review",
+          "url": "https://www.google.com/search?sca_esv=d0d8acd8eacd3733&biw=1920&bih=911&sxsrf=AE3TifPJsJ1XzbZB9mGkiq9F06HY3GEobA:1755354192163&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E1dmhvRg9go-xEbGAUvOfNrsOn_TuGNnmx56QOxvrxJ9PbvSaKBcRYDMBPyVkgOInIgm_Cx4ShCn6vx8Tv5kZn39NixYTlmpRZ8-YqtlLUn8sbI9jg%3D%3D&q=Dutch+First+Landing+Reviews&sa=X&ved=2ahUKEwjJxtD4w4-PAxWpdaQEHdXAFogQ0bkNegQINhAD",
+          "rating": "4.0/5 stars",
+          "reviewCount": 149,
+          "summary": "Dutch First Landing, also known as the Dutch Landing Monument, is a historic landmark located on the east coast of Mauritius in the village of Grand Port. The monument commemorates the arrival of the Dutch in Mauritius in 1598, marking the island's first recorded landing by European explorers."
+        }
+      ],
+      "additional_info": {
+        "notes": "Complement this stop with other Vieux Grand Port sites.",
+        "advisories": {
+          "safety": "Standard outdoor safety guidelines apply.",
+          "travel": "Accessible by car; roadside stop."
+        }
+      },
+      "sub_attractions": []
+    },
+    {
+      "id": "attraction_ferney_viewpoint",
+      "name": "Ferney Viewpoint",
+      "attraction_type": "viewpoint",
+      "description": "Scenic viewpoint overlooking the Ferney valley, nature reserve and surrounding landscapes.",
+      "tags": ["viewpoint", "scenic", "nature", "hiking"],
+      "audience_popularity": {
+        "locals": "low",
+        "tourists": "low"
+      },
+      "location": {
+        "address": "Ferney area, Mauritius",
+        "latitude": -20.356,
+        "longitude": 57.712,
+        "region": "Southeast"
+      },
+      "prerequisites": {
+        "tour_guide_required": false,
+        "booking_required": false,
+        "fee_required": false,
+        "entry_points": [
+          {
+            "name": "Trailhead",
+            "latitude": -20.356,
+            "longitude": 57.712,
+            "access_notes": "Hike required; minimal facilities."
+          }
+        ],
+        "notes": "Combine with Ferney Nature Reserve hike."
+      },
+      "reviews": [
+        {
+          "source": "TripAdvisor",
+          "url": "https://www.tripadvisor.com/Attraction_Review-g481079-d4006157-Reviews-La_Vallee_de_Ferney-Mahebourg.html",
+          "rating": "4.4/5 stars",
+          "reviewCount": 150,
+          "summary": "Valley includes hiking circuits and lookout points with endemic wildlife."
+        }
+      ],
+      "additional_info": {
+        "notes": "Bring water and walking shoes; limited signage.",
+        "advisories": {
+          "safety": "Watch footing.",
+          "travel": "Trail access by car."
+        }
+      },
+      "sub_attractions": []
+    },
+    {
+      "id": "attraction_kestrel_valley",
+      "name": "Kestrel Valley",
+      "attraction_type": "nature_reserve",
+      "description": "Forest hiking area known for Mauritius kestrel sightings and endemic flora in Kestrel Valley near Ferney.",
+      "tags": ["nature", "hiking", "wildlife", "endemic"],
+      "audience_popularity": {
+        "locals": "low",
+        "tourists": "low"
+      },
+      "location": {
+        "address": "Bois des Amourettes area, Mauritius",
+        "latitude": -20.360,
+        "longitude": 57.720,
+        "region": "Southeast"
+      },
+      "prerequisites": {
+        "tour_guide_required": true,
+        "booking_required": true,
+        "fee_required": true,
+        "entry_points": [
+          {
+            "name": "Reserve Entrance",
+            "latitude": -20.360,
+            "longitude": 57.720,
+            "access_notes": "Guided tours required."
+          }
+        ],
+        "notes": "Private guided hikes focused on conservation."
+      },
+      "reviews": [
+        {
+          "source": "Google review",
+          "url": "https://www.google.com/maps/place/Kestrel+Valley/@-20.3394325,57.7337376,17z/data=!4m8!3m7!1s0x217cf6aa1e3fec0d:0x573093378f58a9fb!8m2!3d-20.3394375!4d57.7363125!9m1!1b1!16s%2Fg%2F1hc0h3c7p?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D",
+          "rating": "4.4/5 stars",
+          "reviewCount": 258,
+          "summary": "Kestrel Valley (Domaine du Chasseur) offers hiking and endemic wildlife viewing, including kestrels."
+        }
+      ],
+      "additional_info": {
+        "notes": "Best for birdwatchers; booked tours only.",
+        "advisories": {
+          "safety": "Trail terrain rugged.",
+          "travel": "Booking required; guided tours only."
+        }
+      },
+      "sub_attractions": []
+    },
+    {
+      "id": "attraction_camp_pecheur_waterfront",
+      "name": "Camp Pêcheur Waterfront",
+      "attraction_type": "coastal_area",
+      "description": "Coastal area around Camp Pêcheur near Grand River South East; scenic shoreline with local fishing activity.",
+      "tags": ["coastal", "scenic", "fishing", "views"],
+      "audience_popularity": {
+        "locals": "low",
+        "tourists": "low"
+      },
+      "location": {
+        "address": "Grand River South East, Mauritius",
+        "latitude": -20.348,
+        "longitude": 57.780,
+        "region": "Southeast"
+      },
+      "prerequisites": {
+        "tour_guide_required": false,
+        "booking_required": false,
+        "fee_required": false,
+        "entry_points": [
+          {
+            "name": "Shoreline Access",
+            "latitude": -20.348,
+            "longitude": 57.780,
+            "access_notes": "Walk-in; near waterfall boat launch."
+          }
+        ],
+        "notes": "Quiet fishing village atmosphere."
+      },
+      "reviews": [
+        {
+          "source": "Google review",
+          "url": "https://www.google.com/search?sca_esv=c26ea98e5e07eb9e&sxsrf=AE3TifNBQ1L5FfokoHjgGKiEX2wT6a1i_g:1755355026046&q=camp+pecheur+waterfront&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E1zNth-99prLV_BTYa8j-jUf45kYhwHjRWgHgiaWZNcwsB0VGluxSSV96dpcdYGFC9n11N2bdSVkRY9qgfQaNBv1teX4tXcntxgbhRX45FCl9Ifxgg%3D%3D&sa=X&ved=2ahUKEwix2KCGx4-PAxUtUKQEHc-8OR4QrrQLegQIHBAA&biw=1920&bih=911&dpr=1",
+          "rating": "4.6/5 stars",
+          "reviewCount": 92,
+          "summary": "Nearby accommodation 'La Case du Pêcheur' offers peaceful beautiful surroundings."
+        }
+      ],
+      "additional_info": {
+        "notes": "Great scenic overlay; combine with waterfall visit.",
+        "advisories": {
+          "safety": "Standard coastal safety guidelines apply.",
+          "travel": "Vehicle required."
+        }
+      },
+      "sub_attractions": []
+    },
+    {
+      "id": "attraction_roches_noires_beach",
+      "name": "Roche Noires Beach",
+      "attraction_type": "destination",
+      "description": "Roche Noires is a tranquil public beach located on the northeast coast of Mauritius. Known for its volcanic black rocks contrasting with white sands, it offers calm lagoon waters ideal for swimming and picnics. The area remains relatively quiet compared to other beaches, making it popular with locals.",
+      "tags": ["beach", "swimming", "picnic", "family-friendly", "lagoon"],
+      "audience_popularity": {
+        "locals": "high",
+        "tourists": "moderate"
+      },
+      "location": {
+        "address": "Roche Noires, Rivière du Rempart, Mauritius",
+        "latitude": -20.111,
+        "longitude": 57.737,
+        "region": "Northeast"
+      },
+      "prerequisites": {
+        "tour_guide_required": false,
+        "booking_required": false,
+        "fee_required": false,
+        "entry_points": [
+          {
+            "name": "Public Beach Entrance",
+            "latitude": -20.111,
+            "longitude": 57.736,
+            "access_notes": "Easily accessible by car; roadside parking available."
+          }
+        ],
+        "notes": "Beach is freely accessible but can get busy on weekends."
+      },
+      "reviews": [
+        {
+          "source": "Google review",
+          "url": "https://www.google.com/maps/place/Roches+Noires+Beach/@-20.1044305,57.7230196,17z/data=!4m8!3m7!1s0x217cff2a518e52a7:0x69d14122815924e4!8m2!3d-20.1044356!4d57.7255945!9m1!1b1!16s%2Fg%2F11l27fctqf?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D",
+          "rating": "4.7/5 stars",
+          "reviewCount": 36,
+          "summary": "Visitors enjoy the peaceful setting and volcanic rock formations. Reviews highlight that the beach is quiet compared to more touristy spots, but note limited facilities."
+        }
+      ],
+      "additional_info": {
+        "notes": "Good picnic area; limited shade so bring umbrellas.",
+        "advisories": {
+          "safety": "Be cautious of slippery rocks when entering the water.",
+          "travel": null
+        }
+      },
+      "sub_attractions": []
+    },
+      {
+        "id": "attraction_ile_aux_cerfs",
+        "name": "Île aux Cerfs",
+        "attraction_type": "island",
+        "description": "A popular islet off the east coast, known for its white-sand beaches, water sports, and vibrant marine life. Accessible by boat from Trou d'Eau Douce.",
+        "tags": ["beach", "water sports", "island", "snorkeling", "scenic"],
+        "audience_popularity": {
+          "locals": "high",
+          "tourists": "high"
+        },
+        "location": {
+          "address": "Trou d'Eau Douce, Mauritius",
+          "latitude": -20.267,
+          "longitude": 57.738,
+          "region": "East"
+        },
+        "prerequisites": {
+          "tour_guide_required": false,
+          "booking_required": false,
+          "fee_required": false,
+          "entry_points": [
+            {
+              "name": "Boat from Trou d'Eau Douce",
+              "latitude": -20.267,
+              "longitude": 57.735,
+              "access_notes": "Boat launches from the eastern shore; public pickup boats available."
+            }
+          ],
+          "notes": "Day trips commonly arranged; bring sun protection."
+        },
+        "reviews": [
+          {
+            "source": "TripAdvisor",
+            "url": "https://www.tripadvisor.com/Attraction_Review-g293816-d477276-Reviews-Ile_aux_Cerfs-Mauritius.html",
+            "rating": "4.1/5 stars",
+            "reviewCount": 7304,
+            "summary": "A picturesque paradise with clear waters and fun water activities, but can be crowded during peak hours."
+          }
+        ],
+        "additional_info": {
+          "notes": "Ideal for snorkeling and relaxation; vendors available, bring cash.",
+          "advisories": {
+            "safety": "Stay hydrated; boat transit subject to sea conditions.",
+            "travel": "Accessible only by sea; plan return times."
+          }
+        },
+        "sub_attractions": []
+      },
+      {
+        "id": "attraction_blue_bay_beach",
+        "name": "Blue Bay Beach",
+        "attraction_type": "beach",
+        "description": "One of the most famous beaches in Mauritius, known for its turquoise lagoon and marine park ideal for snorkeling and glass-bottom boat rides.",
+        "tags": ["beach", "snorkeling", "marine park", "family-friendly"],
+        "audience_popularity": {
+          "locals": "high",
+          "tourists": "high"
+        },
+        "location": {
+          "address": "Blue Bay, Grand Port, Mauritius",
+          "latitude": -20.442,
+          "longitude": 57.716,
+          "region": "Southeast"
+        },
+        "prerequisites": {
+          "tour_guide_required": false,
+          "booking_required": false,
+          "fee_required": false,
+          "entry_points": [
+            {
+              "name": "Blue Bay Public Beach Entrance",
+              "latitude": -20.442,
+              "longitude": 57.716,
+              "access_notes": "Easily accessible; parking and picnic areas available."
+            }
+          ],
+          "notes": "Marine park activities may require booking with operators."
+        },
+        "reviews": [
+          {
+            "source": "Google Reviews",
+            "url": "https://www.google.com/maps/place/Blue+Bay+Beach/@-20.4441924,57.7113193,16z/data=!3m1!4b1!4m6!3m5!1s0x217c8b136aada7c9:0x9ca3a5db5967498e!8m2!3d-20.4441928!4d57.7164692!16s%2Fg%2F1ptx_vcdr?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D",
+            "rating": "4.5/5 stars",
+            "reviewCount": 4122,
+            "summary": "Crystal-clear waters perfect for snorkeling and family outings. Reviewers highlight vibrant marine life and easy beach access."
+          }
+        ],
+        "additional_info": {
+          "notes": "Great for glass-bottom boat rides and picnics.",
+          "advisories": {
+            "safety": "Watch for strong currents outside lagoon.",
+            "travel": null
+          }
+        },
+        "sub_attractions": []
+      },
+      {
+        "id": "attraction_pont_naturel",
+        "name": "Pont Naturel",
+        "attraction_type": "rock formation",
+        "description": "A dramatic natural rock bridge along the wild southern coast, offering panoramic ocean views and crashing waves.",
+        "tags": ["scenic", "photography", "nature", "cliffside"],
+        "audience_popularity": {
+          "locals": "moderate",
+          "tourists": "moderate"
+        },
+        "location": {
+          "address": "Pont Naturel, Le Bouchon, Mauritius",
+          "latitude": -20.474,
+          "longitude": 57.683,
+          "region": "South"
+        },
+        "prerequisites": {
+          "tour_guide_required": false,
+          "booking_required": false,
+          "fee_required": false,
+          "entry_points": [
+            {
+              "name": "Coastal Path Access",
+              "latitude": -20.474,
+              "longitude": 57.683,
+              "access_notes": "Accessible via dirt road; best with 4x4 vehicle."
+            }
+          ],
+          "notes": "Remote location; limited facilities."
+        },
+        "reviews": [
+          {
+            "source": "TripAdvisor",
+            "url": "https://www.tripadvisor.com/Attraction_Review-g293816-d3428321-Reviews-Pont_Naturel-Mauritius.html",
+            "rating": "4.6/5 stars",
+            "reviewCount": 109,
+            "summary": "Breathtaking sea views and dramatic waves, but access can be difficult."
+          }
+        ],
+        "additional_info": {
+          "notes": "No shops nearby; bring water.",
+          "advisories": {
+            "safety": "Cliffs can be dangerous; avoid standing too close to the edge.",
+            "travel": "Rough road access."
+          }
+        },
+        "sub_attractions": []
+      },
+      {
+        "id": "attraction_ile_aux_cerfs_golf",
+        "name": "Île aux Cerfs Golf Club",
+        "attraction_type": "golf course",
+        "description": "A world-class 18-hole golf course designed by Bernhard Langer, located on Île aux Cerfs and surrounded by lagoons and tropical vegetation.",
+        "tags": ["golf", "luxury", "island", "sports"],
+        "audience_popularity": {
+          "locals": "low",
+          "tourists": "high"
+        },
+        "location": {
+          "address": "Île aux Cerfs, Trou d'Eau Douce, Mauritius",
+          "latitude": -20.269,
+          "longitude": 57.740,
+          "region": "East"
+        },
+        "prerequisites": {
+          "tour_guide_required": false,
+          "booking_required": true,
+          "fee_required": true,
+          "entry_points": [
+            {
+              "name": "Boat Transfer from Pointe Maurice Jetty",
+              "latitude": -20.268,
+              "longitude": 57.738,
+              "access_notes": "Golfers ferried directly to the island course."
+            }
+          ],
+          "notes": "Booking required in advance."
+        },
+        "reviews": [
+          {
+            "source": "TripAdvisor",
+            "url": "https://www.tripadvisor.com/Attraction_Review-g488107-d625395-Reviews-Ile_Aux_Cerfs_Golf_Club-Trou_d_eau_Douce.html",
+            "rating": "4.7/5 stars",
+            "reviewCount": 539,
+            "summary": "Highly praised for its unique island setting, stunning views, and challenging design.Unbelievable golf course. No bad holes and everything is a great test of golf. The signature 14th hole worth the sea and the waves crashing on the reef was a great view"
+          }
+        ],
+        "additional_info": {
+          "notes": "Golf carts and equipment rentals available.",
+          "advisories": {
+            "safety": "Book early during high season.",
+            "travel": "Boat transfer included with booking."
+          }
+        },
+        "sub_attractions": []
+      },
+      {
+        "id": "attraction_la_cambuse",
+        "name": "La Cambuse Beach",
+        "attraction_type": "beach",
+        "description": "A hidden, wild beach near the airport, less frequented by tourists, known for its natural beauty and wide sandy shore.",
+        "tags": ["beach", "nature", "quiet", "scenic"],
+        "audience_popularity": {
+          "locals": "moderate",
+          "tourists": "low"
+        },
+        "location": {
+          "address": "Plaine Magnien, Mauritius",
+          "latitude": -20.443,
+          "longitude": 57.691,
+          "region": "Southeast"
+        },
+        "prerequisites": {
+          "tour_guide_required": false,
+          "booking_required": false,
+          "fee_required": false,
+          "entry_points": [
+            {
+              "name": "Beach Access Road",
+              "latitude": -20.443,
+              "longitude": 57.691,
+              "access_notes": "Accessible by car; limited parking."
+            }
+          ],
+          "notes": "No facilities; bring supplies."
+        },
+        "reviews": [
+          {
+            "source": "TripAdvisor",
+            "url": "https://www.tripadvisor.com/Attraction_Review-g3159978-d8734832-Reviews-La_Cambuse_Beach-Le_Bouchon.html",
+            "rating": "4.6/5 stars",
+            "reviewCount": 30,
+            "summary": "Loved by nature enthusiasts for its unspoiled beauty and peacefulness."
+          }
+        ],
+        "additional_info": {
+          "notes": "Good for quiet picnics.",
+          "advisories": {
+            "safety": "Strong currents; not always safe for swimming.",
+            "travel": null
+          }
+        },
+        "sub_attractions": []
+      },
+      {
+        "id": "attraction_pointe_desny",
+        "name": "Pointe d'Esny Beach",
+        "attraction_type": "beach",
+        "description": "A long stretch of soft white sand and crystal-clear waters, ideal for swimming and snorkeling, located near Blue Bay.",
+        "tags": ["beach", "swimming", "snorkeling", "scenic"],
+        "audience_popularity": {
+          "locals": "moderate",
+          "tourists": "moderate"
+        },
+        "location": {
+          "address": "Pointe d'Esny, Grand Port, Mauritius",
+          "latitude": -20.444,
+          "longitude": 57.722,
+          "region": "Southeast"
+        },
+        "prerequisites": {
+          "tour_guide_required": false,
+          "booking_required": false,
+          "fee_required": false,
+          "entry_points": [
+            {
+              "name": "Public Beach Access",
+              "latitude": -20.444,
+              "longitude": 57.722,
+              "access_notes": "Limited public access points; mainly private villas."
+            }
+          ],
+          "notes": "Quieter than Blue Bay; limited facilities."
+        },
+        "reviews": [
+          {
+            "source": "TripAdvisor",
+            "url": "https://www.tripadvisor.com/Attraction_Review-g481079-d1052845-Reviews-Pointe_d_Esny-Mahebourg.html",
+            "rating": "4.6/5 stars",
+            "reviewCount": 271,
+            "summary": "Praised for its clear waters and peaceful atmosphere; less crowded than Blue Bay."
+          }
+        ],
+        "additional_info": {
+          "notes": "Great for swimming and relaxation.",
+          "advisories": {
+            "safety": "Be careful of boats in lagoon.",
+            "travel": null
+          }
+        },
+        "sub_attractions": []
+      },
+      {
+        "id": "attraction_savinia",
+        "name": "Savinia Beach",
+        "attraction_type": "beach",
+        "description": "A small, lesser-known beach offering a peaceful escape with shallow waters and views of the southeast lagoon.",
+        "tags": ["beach", "quiet", "scenic"],
+        "audience_popularity": {
+          "locals": "low",
+          "tourists": "low"
+        },
+        "location": {
+          "address": "Savini, L'Escalier Mauritius",
+          "latitude": -20.448,
+          "longitude": 57.726,
+          "region": "Southeast"
+        },
+        "prerequisites": {
+          "tour_guide_required": false,
+          "booking_required": false,
+          "fee_required": false,
+          "entry_points": [
+            {
+              "name": "Coastal Access Road",
+              "latitude": -20.448,
+              "longitude": 57.726,
+              "access_notes": "Small unpaved road; limited facilities."
+            }
+          ],
+          "notes": "Quiet spot away from tourist crowds."
+        },
+        "reviews": [
+          {
+            "source": "Google Reviews",
+            "url": "https://www.google.com/maps/place/Savinia+Beach/@-20.4896027,57.6438146,17z/data=!4m8!3m7!1s0x217c89d1438a4891:0x71c7b3b83f525d79!8m2!3d-20.4896027!4d57.6463895!9m1!1b1!16s%2Fg%2F11mv4nxdh7?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D",
+            "rating": "47/5 stars",
+            "reviewCount": 90,
+            "summary": "Hidden gem for peace seekers, but with almost no facilities."
+          }
+        ],
+        "additional_info": {
+          "notes": "Best for quiet walks and relaxation.",
+          "advisories": {
+            "safety": "No lifeguards; swim cautiously.",
+            "travel": null
+          }
+        },
+        "sub_attractions": []
+      },
+      {
+        "id": "attraction_palmar",
+        "name": "Palmar Beach",
+        "attraction_type": "beach",
+        "description": "A quieter beach next to Belle Mare, with shallow waters and coconut palms, popular among locals for weekend relaxation.",
+        "tags": ["beach", "family-friendly", "quiet", "swimming"],
+        "audience_popularity": {
+          "locals": "moderate",
+          "tourists": "low"
+        },
+        "location": {
+          "address": "Palmar, Flacq, Mauritius",
+          "latitude": -20.188,
+          "longitude": 57.787,
+          "region": "East"
+        },
+        "prerequisites": {
+          "tour_guide_required": false,
+          "booking_required": false,
+          "fee_required": false,
+          "entry_points": [
+            {
+              "name": "Palmar Public Beach",
+              "latitude": -20.188,
+              "longitude": 57.787,
+              "access_notes": "Easily accessible by car; parking available."
+            }
+          ],
+          "notes": "Less crowded than Belle Mare."
+        },
+        "reviews": [
+          {
+            "source": "TripAdvisor",
+            "url": "https://www.tripadvisor.com/Attraction_Review-g1182872-d16665031-Reviews-Palmar_Beach-Palmar.html",
+            "rating": "4.6/5 stars",
+            "reviewCount": 16,
+            "summary": "Praised for its calm waters and relaxing environment, though not as lively as Belle Mare."
+          }
+        ],
+        "additional_info": {
+          "notes": "Shaded by coconut palms; bring snacks.",
+          "advisories": {
+            "safety": "Some coral rocks in water.",
+            "travel": null
+          }
+        },
+        "sub_attractions": []
+      },
+      {
+        "id": "attraction_belle_mare",
+        "name": "Belle Mare Beach",
+        "attraction_type": "beach",
+        "description": "One of the longest and most beautiful beaches in Mauritius, famous for its sunrise views, turquoise waters, and water sports.",
+        "tags": ["beach", "swimming", "sunrise", "water sports"],
+        "audience_popularity": {
+          "locals": "high",
+          "tourists": "high"
+        },
+        "location": {
+          "address": "Belle Mare, Flacq, Mauritius",
+          "latitude": -20.189,
+          "longitude": 57.774,
+          "region": "East"
+        },
+        "prerequisites": {
+          "tour_guide_required": false,
+          "booking_required": false,
+          "fee_required": false,
+          "entry_points": [
+            {
+              "name": "Belle Mare Public Beach",
+              "latitude": -20.189,
+              "longitude": 57.774,
+              "access_notes": "Large public beach with parking, vendors, and facilities."
+            }
+          ],
+          "notes": "Popular for sunrise walks and water sports."
+        },
+        "reviews": [
+          {
+            "source": "TripAdvisor",
+            "url": "https://www.tripadvisor.com/Attraction_Review-g298342-d14008590-Reviews-Belle_Mare_Beach-Belle_Mare.html",
+            "rating": "4.7/5 stars",
+            "reviewCount": 304,
+            "summary": "Highly praised for its beauty, long sandy stretch, and sunrise views; can be busy on weekends."
+          }
+        ],
+        "additional_info": {
+          "notes": "Plenty of food stalls on weekends.",
+          "advisories": {
+            "safety": "Watch out for jellyfish during certain months.",
+            "travel": null
+          }
+        },
+        "sub_attractions": []
+      }
+    ]
+  }

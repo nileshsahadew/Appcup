@@ -1,0 +1,679 @@
+{
+    "attractions": [
+      {
+        "id": "attraction_monvert_nature_walk",
+        "name": "Monvert Nature Walk",
+        "attraction_type": "nature_walk",
+        "description": "A serene arboretum and rehabilitated indigenous forest near Curepipe, showcasing endemic species and quiet hiking trails.",
+        "tags": ["nature", "hiking", "arboretum", "endemics"],
+        "audience_popularity": {
+          "locals": "moderate",
+          "tourists": "moderate"
+        },
+        "location": {
+          "address": "Forest Side, Curepipe, Mauritius",
+          "latitude": -20.416,
+          "longitude": 57.517,
+          "region": "North of Curepipe"
+        },
+        "prerequisites": {
+          "tour_guide_required": false,
+          "booking_required": false,
+          "fee_required": false,
+          "entry_points": [
+            {
+              "name": "Visitor Interpretation Centre Entrance",
+              "latitude": -20.416,
+              "longitude": 57.517,
+              "access_notes": "Enter via A10 roadside; maps and info available."
+            }
+          ],
+          "notes": "Trails with endemic plantings and a fernery."  
+        },
+        "reviews": [
+          {
+            "source": "Google Reviews",
+            "url": "https://wanderlog.com/place/details/1016511/monvert-nature-walk",
+            "rating": "4.1/5",
+            "reviewCount": 45,
+            "summary": "Peaceful and scenic with labeled endemic species; trails can be a bit rough." 
+          }
+        ],
+        "additional_info": {
+          "notes": "Features arboretum with critically endangered species and forest trails.",
+          "advisories": {
+            "safety": "Uneven trails, deteriorating footbridges.",
+            "travel": "Parking limited; best reached by car."
+          }
+        },
+        "sub_attractions": []
+      },
+      {
+        "id": "attraction_ssr_botanical_garden_curepipe",
+        "name": "SSR Botanical Garden of Curepipe",
+        "attraction_type": "botanical_garden",
+        "description": "The second-largest botanical garden in Mauritius, home to exotic and rare endemic plants like the world’s rarest palm.",
+        "tags": ["botanical garden", "endemic plants", "scenic", "park"],
+        "audience_popularity": {
+          "locals": "high",
+          "tourists": "moderate"
+        },
+        "location": {
+          "address": "Route des Jardins, Curepipe, Mauritius",
+          "latitude": -20.390,
+          "longitude": 57.523,
+          "region": "Curepipe Center"
+        },
+        "prerequisites": {
+          "tour_guide_required": false,
+          "booking_required": false,
+          "fee_required": false,
+          "entry_points": [
+            {
+              "name": "Main Garden Entrance",
+              "latitude": -20.390,
+              "longitude": 57.523,
+              "access_notes": "Free public entry from Botanical Garden Street."
+            }
+          ],
+          "notes": "Informal layout with lake, gazebo, and rare Hyophorbe amaricaulis palm." 
+        },
+        "reviews": [
+          {
+            "source": "Google Reviews",
+            "url": "https://www.google.com/maps/place/SSR+Botanical+Garden+of+Curepipe/@-20.3247907,57.5132309,17z/data=!3m1!4b1!4m6!3m5!1s0x217c5dc41c3f6667:0x7bf02a3b6aaabba3!8m2!3d-20.3247907!4d57.5158058!16s%2Fg%2F11rrp13ydp?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D",
+            "rating": "4.5/5",
+            "reviewCount": 20,
+            "summary": "Cool and peaceful garden with exotic plants and the rarest palm species." 
+          }
+        ],
+        "additional_info": {
+          "notes": "Ideal for families and education on endemic flora.",
+          "advisories": {
+            "safety": "Largely safe and easy to explore.",
+            "travel": null
+          }
+        },
+        "sub_attractions": []
+      },
+      {
+        "id": "attraction_war_memorial_curepipe",
+        "name": "War Memorial, Curepipe",
+        "attraction_type": "monument",
+        "description": "A memorial honoring those who served in war, located in the heart of Curepipe.",
+        "tags": ["history", "monument", "memorial"],
+        "audience_popularity": {
+          "locals": "moderate",
+          "tourists": "low"
+        },
+        "location": {
+          "address": "Curepipe, Mauritius",
+          "latitude": -20.389,
+          "longitude": 57.508,
+          "region": "Curepipe Center"
+        },
+        "prerequisites": {
+          "tour_guide_required": false,
+          "booking_required": false,
+          "fee_required": false,
+          "entry_points": [
+            {
+              "name": "Public Square",
+              "latitude": -20.389,
+              "longitude": 57.508,
+              "access_notes": "Easily accessible in town center."
+            }
+          ],
+          "notes": "Quiet spot for reflection near municipal areas."
+        },
+        "reviews": [
+          {
+            "source": "Google Reviews",
+            "url": "https://www.google.com/maps/place/War+Memorial/@-20.3177461,57.5214046,17z/data=!3m1!4b1!4m6!3m5!1s0x217c5d0002e55d5d:0x53bef4541cf46f8!8m2!3d-20.3177461!4d57.5239795!16s%2Fg%2F11vsq3fw9b?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D",
+            "rating": "4.3/5",
+            "reviewCount": 3,
+            "summary": "Noted as one of the city landmarks; present in the Curepipe townscape." 
+          }
+        ],
+        "additional_info": {
+          "notes": null,
+          "advisories": {
+            "safety": null,
+            "travel": null
+          }
+        },
+        "sub_attractions": []
+      },
+      {
+        "id": "attraction_st_therese_church",
+        "name": "St Thérèse Church",
+        "attraction_type": "religious_site",
+        "description": "A prominent Catholic church in Curepipe, showcasing local spiritual and architectural heritage.",
+        "tags": ["church", "architecture", "religious"],
+        "audience_popularity": {
+          "locals": "high",
+          "tourists": "moderate"
+        },
+        "location": {
+          "address": "Curepipe, Mauritius",
+          "latitude": -20.388,
+          "longitude": 57.510,
+          "region": "Curepipe Center"
+        },
+        "prerequisites": {
+          "tour_guide_required": false,
+          "booking_required": false,
+          "fee_required": false,
+          "entry_points": [
+            {
+              "name": "Main Church Entrance",
+              "latitude": -20.388,
+              "longitude": 57.510,
+              "access_notes": "Accessible via Rue de l'Église."
+            }
+          ],
+          "notes": "Active religious site; observance of services required."
+        },
+        "reviews": [
+          {
+            "source": "Google Reviews",
+            "url": "https://www.google.com/maps/place/Ste+Th%C3%A9r%C3%A8se+Church/@-20.3196449,57.5220542,17z/data=!3m1!4b1!4m6!3m5!1s0x217c5c441cb10ad1:0x8c9089501bfee95!8m2!3d-20.3196449!4d57.5246291!16s%2Fg%2F1hc0hlp0m?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D",
+            "rating": "4.6/5",
+            "reviewCount": 319,
+            "summary": "A key religious landmark with impressive architecture within the town of Curepipe." 
+          }
+        ],
+        "additional_info": {
+          "notes": null,
+          "advisories": {
+            "safety": null,
+            "travel": null
+          }
+        },
+        "sub_attractions": []
+      },
+      {
+        "id": "attraction_jardin_municipal_paul_virginie",
+        "name": "Jardin Municipal Paul & Virginie",
+        "attraction_type": "park",
+        "description": "Municipal garden in Curepipe, offering relaxing green spaces named after Paul & Virginie.",
+        "tags": ["park", "garden", "relaxation"],
+        "audience_popularity": {
+          "locals": "high",
+          "tourists": "low"
+        },
+        "location": {
+          "address": "Curepipe, Mauritius",
+          "latitude": -20.3895,
+          "longitude": 57.5095,
+          "region": "Curepipe Center"
+        },
+        "prerequisites": {
+          "tour_guide_required": false,
+          "booking_required": false,
+          "fee_required": false,
+          "entry_points": [
+            {
+              "name": "Garden Gate",
+              "latitude": -20.3895,
+              "longitude": 57.5095,
+              "access_notes": "Open public garden near town center."
+            }
+          ],
+          "notes": "Small green retreat in urban Curepipe."
+        },
+        "reviews": [
+          {
+            "source": "Google Reviews",
+            "url": "https://www.google.com/maps/place/Jardin+municipal+de+curepipe+paul+%26Virginie/@-20.3180171,57.5234609,17z/data=!3m1!4b1!4m6!3m5!1s0x217c5ddd803ab5cf:0x59d1d57ef3377c2e!8m2!3d-20.3180171!4d57.5260358!16s%2Fg%2F11fj6rg712?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D",
+            "rating": "4.6/5",
+            "reviewCount": 9,
+            "summary": "Listed among notable landmarks in Coupepipe." 
+          }
+        ],
+        "additional_info": {
+          "notes": null,
+          "advisories": {
+            "safety": null,
+            "travel": null
+          }
+        },
+        "sub_attractions": []
+      },
+      {
+        "id": "attraction_warriors_rest_memorial",
+        "name": "Warrior's Rest Memorial",
+        "attraction_type": "memorial",
+        "description": "A war memorial located in Curepipe, dedicated to fallen warriors.",
+        "tags": ["memorial", "history"],
+        "audience_popularity": {
+          "locals": "low",
+          "tourists": "low"
+        },
+        "location": {
+          "address": "Curepipe, Mauritius",
+          "latitude": -20.387,
+          "longitude": 57.507,
+          "region": "Curepipe Center"
+        },
+        "prerequisites": {
+          "tour_guide_required": false,
+          "booking_required": false,
+          "fee_required": false,
+          "entry_points": [
+            {
+              "name": "Roadside Stop",
+              "latitude": -20.387,
+              "longitude": 57.507,
+              "access_notes": "Visible from main road; no facilities."
+            }
+          ],
+          "notes": "Reflective site among urban surroundings."
+        },
+        "reviews": [
+          {
+            "source": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Curepipe",
+            "rating": null,
+            "reviewCount": null,
+            "summary": "Mentioned as one of the monuments within Curepipe." 
+          }
+        ],
+        "additional_info": {
+          "notes": null,
+          "advisories": {
+            "safety": null,
+            "travel": null
+          }
+        },
+        "sub_attractions": []
+      },
+      {
+        "id": "attraction_promenade_pere_laval",
+        "name": "Promenade Père Laval",
+        "attraction_type": "promenade",
+        "description": "A peaceful walkway or public promenade in Curepipe named after Father Laval.",
+        "tags": ["promenade", "walking", "public space"],
+        "audience_popularity": {
+          "locals": "moderate",
+          "tourists": "low"
+        },
+        "location": {
+          "address": "Vacoas-Phoenix, Mauritius",
+          "latitude": -20.386,
+          "longitude": 57.508,
+          "region": "Center"
+        },
+        "prerequisites": {
+          "tour_guide_required": false,
+          "booking_required": false,
+          "fee_required": false,
+          "entry_points": [
+            {
+              "name": "Promenade Entrance",
+              "latitude": -20.386,
+              "longitude": 57.508,
+              "access_notes": "Free public access."
+            }
+          ],
+          "notes": "Used for leisurely walks near town."
+        },
+        "reviews": [
+          {
+            "source": "Google Reviews",
+            "url": "https://www.google.com/maps/place/Promenade+P%C3%A8re+Laval/@-20.305904,57.4450061,12z/data=!4m16!1m9!3m8!1s0x217c5b05e2db4299:0x8bb0b737f2b9f726!2sPromenade+P%C3%A8re+Laval!8m2!3d-20.2872616!4d57.5013018!9m1!1b1!16s%2Fg%2F11rmywy_5t!3m5!1s0x217c5b05e2db4299:0x8bb0b737f2b9f726!8m2!3d-20.2872616!4d57.5013018!16s%2Fg%2F11rmywy_5t?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D",
+            "rating": "5/5",
+            "reviewCount": 4,
+            "summary": "A nice place to walk and enjoy the view." 
+          }
+        ],
+        "additional_info": {
+          "notes": null,
+          "advisories": {
+            "safety": null,
+            "travel": null
+          }
+        },
+        "sub_attractions": []
+      },
+      {
+        "id": "attraction_carrefour_phoenix",
+        "name": "Carrefour Phoenix",
+        "attraction_type": "shopping_center",
+        "description": "One of the largest shopping centers near Curepipe, offering groceries, shopping, and dining options.",
+        "tags": ["shopping", "center", "grocery"],
+        "audience_popularity": {
+          "locals": "high",
+          "tourists": "moderate"
+        },
+        "location": {
+          "address": "Phoenix, Mauritius",
+          "latitude": -20.335,
+          "longitude": 57.515,
+          "region": "Center"
+        },
+        "prerequisites": {
+          "tour_guide_required": false,
+          "booking_required": false,
+          "fee_required": false,
+          "entry_points": [
+            {
+              "name": "Main Mall Entrance",
+              "latitude": -20.335,
+              "longitude": 57.515,
+              "access_notes": "Accessible by car; ample parking."
+            }
+          ],
+          "notes": "Features supermarket and multiple shops."
+        },
+        "reviews": [
+          {
+            "source": "Google Reviews",
+            "url": "https://www.google.com/maps/place/Carrefour+Phoenix/@-20.2794019,57.4928654,17z/data=!3m2!4b1!5s0x217c5b64dafc5641:0x44d1091a7956492e!4m6!3m5!1s0x217c5b64dba01045:0x8669fff49dcbb99b!8m2!3d-20.279407!4d57.4954403!16s%2Fg%2F1tjd1twj?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D",
+            "rating": "4.2/5",
+            "reviewCount": 6998,
+            "summary": "Popular regional shopping center just north of Curepipe. It has a lot of shops and a lot of people." 
+          }
+        ],
+        "additional_info": {
+          "notes": null,
+          "advisories": {
+            "safety": null,
+            "travel": "Car recommended."
+          }
+        },
+        "sub_attractions": []
+      },
+      {
+        "id": "attraction_mauritius_glass_gallery",
+        "name": "Mauritius Glass Gallery Ltd",
+        "attraction_type": "shop",
+        "description": "Specialty gallery showcasing handcrafted glassware created in Mauritius.",
+        "tags": ["arts", "gallery", "shopping", "handmade"],
+        "audience_popularity": {
+          "locals": "low",
+          "tourists": "moderate"
+        },
+        "location": {
+          "address": "Phoenix, Mauritius",
+          "latitude": -20.392,
+          "longitude": 57.509,
+          "region": "Center"
+        },
+        "prerequisites": {
+          "tour_guide_required": false,
+          "booking_required": false,
+          "fee_required": false,
+          "entry_points": [
+            {
+              "name": "Gallery Entrance",
+              "latitude": -20.392,
+              "longitude": 57.509,
+              "access_notes": "Accessible from main road; small shop space."
+            }
+          ],
+          "notes": "Features locally made glass art."
+        },
+        "reviews": [
+          {
+            "source": "TripAdvisor",
+            "url": "https://www.tripadvisor.com/Attraction_Review-g2509129-d3935071-Reviews-The_Mauritius_Glass_Gallery-Phoenix.html",
+            "rating": "4.3/5",
+            "reviewCount": 54,
+            "summary": "Arts and crafts gallery made with glass within the town." 
+          }
+        ],
+        "additional_info": {
+          "notes": null,
+          "advisories": {
+            "safety": null,
+            "travel": null
+          }
+        },
+        "sub_attractions": []
+      },
+      {
+        "id": "attraction_le_valentina_mall",
+        "name": "Le Valentina Shopping Mall",
+        "attraction_type": "shopping_center",
+        "description": "Local shopping mall in Vacoas-Phoenix offering retail outlets and dining options.",
+        "tags": ["shopping", "mall", "retail"],
+        "audience_popularity": {
+          "locals": "moderate",
+          "tourists": "low"
+        },
+        "location": {
+          "address": "Vacoas-Phoenix, Mauritius",
+          "latitude": -20.393,
+          "longitude": 57.508,
+          "region": "Center"
+        },
+        "prerequisites": {
+          "tour_guide_required": false,
+          "booking_required": false,
+          "fee_required": false,
+          "entry_points": [
+            {
+              "name": "Mall Entrance",
+              "latitude": -20.393,
+              "longitude": 57.508,
+              "access_notes": "Easily accessible by road."
+            }
+          ],
+          "notes": "Includes shops and eateries."
+        },
+        "reviews": [
+          {
+            "source": "Google Reviews",
+            "url": "https://www.google.com/maps/place/Le+Valentina+Shopping+Mall/@-20.2799439,57.5035157,17z/data=!4m18!1m9!3m8!1s0x217c5be9cc4d4277:0xb00182b6953ded9e!2sLe+Valentina+Shopping+Mall!8m2!3d-20.279949!4d57.5060906!9m1!1b1!16s%2Fg%2F11h9g4062t!3m7!1s0x217c5be9cc4d4277:0xb00182b6953ded9e!8m2!3d-20.279949!4d57.5060906!9m1!1b1!16s%2Fg%2F11h9g4062t?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D",
+            "rating": "4.0/5",
+            "reviewCount": 1878,
+            "summary": "One of the local shopping malls in Phoenix." 
+          }
+        ],
+        "additional_info": {
+          "notes": null,
+          "advisories": {
+            "safety": null,
+            "travel": null
+          }
+        },
+        "sub_attractions": []
+      },
+     
+      {
+        "id": "attraction_piton_du_milieu_mountain_reservoir",
+        "name": "Piton du Milieu Mountain & Reservoir",
+        "attraction_type": "mountain_reservoir",
+        "description": "A scenic mountain and reservoir area in the Midlands east of Curepipe, ideal for hiking and quiet reflection.",
+        "tags": ["mountain", "reservoir", "hiking", "nature"],
+        "audience_popularity": {
+          "locals": "low",
+          "tourists": "low"
+        },
+        "location": {
+          "address": "Dubreuil, Mauritius",
+          "latitude": -20.312,
+          "longitude": 57.540,
+          "region": "Center"
+        },
+        "prerequisites": {
+          "tour_guide_required": false,
+          "booking_required": false,
+          "fee_required": false,
+          "entry_points": [
+            {
+              "name": "Piton du Milieu Mountain",
+              "latitude": -20.312,
+              "longitude": 57.540,
+              "access_notes": "Accessible via Midlands road; unmarked paths."
+            }
+          ],
+          "notes": "Quiet nature area; great for photography."
+        },
+        "reviews": [
+          {
+            "source": "Google Reviews",
+            "url": "https://www.google.com/maps/place/Piton+du+Milieu+Mountain/@-20.2864775,57.5464452,14z/data=!4m14!1m7!3m6!1s0x217c59471bcb8fa7:0x7a6e3771aa65e35c!2sPiton+du+Milieu+Reservoir!8m2!3d-20.2886111!4d57.5736111!16s%2Fg%2F1tk69zmx!3m5!1s0x217c59ad7299c7dd:0xcc5438f96b96d4f3!8m2!3d-20.289365!4d57.5913117!16s%2Fg%2F11j3w9372y?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D",
+            "rating": "4.6/5",
+            "reviewCount": 5,
+            "summary": "Nice place to be for hiking,relaxing,Fishing." 
+          }
+        ],
+        "additional_info": {
+          "notes": "Secluded area away from urban traffic.",
+          "advisories": {
+            "safety": "Wear hiking shoes; limited signage.",
+            "travel": "Car access recommended."
+          }
+        },
+        "sub_attractions": []
+    
+    },
+    {
+      "id": "attraction_trou_aux_cerfs",
+      "name": "Trou aux Cerfs Volcano",
+      "attraction_type": "volcano_crater",
+      "description": "A dormant volcanic crater about 605 m high in Curepipe, with a broad rim, lush greenery, and sweeping panoramic views.",
+      "tags": ["volcano", "crater", "viewpoint", "nature"],
+      "audience_popularity": {
+        "locals": "high",
+        "tourists": "high"
+      },
+      "location": {
+        "address": "Curepipe, Mauritius",
+        "latitude": -20.315,
+        "longitude": 57.505,
+        "region": "Center"
+      },
+      "prerequisites": {
+        "tour_guide_required": false,
+        "booking_required": false,
+        "fee_required": false,
+        "entry_points": [
+          {
+            "name": "Crater Rim Access",
+            "latitude": -20.315,
+            "longitude": 57.505,
+            "access_notes": "Accessible by car or walking; parking available nearby."
+          }
+        ],
+        "notes": "360° views; jogging path around the crater."
+      },
+      "reviews": [
+        {
+          "source": "TripAdvisor",
+          "url": "https://www.tripadvisor.com/Attraction_Review-g293816-d472663-Reviews-Trou_aux_Cerfs-Mauritius.html",
+          "rating": "3.5/5",
+          "reviewCount": 801,
+          "summary": "A pleasant place to take a walk. You can go all the way around in about half an hour. It is quite high, so the views are pleasant."
+        }
+      ],
+      "additional_info": {
+        "notes": "Cooler microclimate; popular walking spot.",
+        "advisories": {
+          "safety": "Stay on the path; avoid walking into the crater.",
+          "travel": "Best accessed by car."
+        }
+      },
+      "sub_attractions": []
+    },
+    {
+      "id": "attraction_caverne_hirondelle",
+      "name": "Caverne Hirondelle",
+      "attraction_type": "cave_museum",
+      "description": "A fascinating geological cave exhibit located near Vacoas-Phoenix, showcasing stunning stalactites, stalagmites, and educational displays.",
+      "tags": ["cave", "geology", "museum", "nature"],
+      "audience_popularity": {
+        "locals": "low",
+        "tourists": "low"
+      },
+      "location": {
+        "address": "Vacoas-Phoenix area, Mauritius",
+        "latitude": -20.355,
+        "longitude": 57.510,
+        "region": "North of Curepipe"
+      },
+      "prerequisites": {
+        "tour_guide_required": false,
+        "booking_required": false,
+        "fee_required": false,
+        "entry_points": [
+          {
+            "name": "Museum Entrance",
+            "latitude": -20.355,
+            "longitude": 57.510,
+            "access_notes": "Accessible by car via A1 towards Vacoas-Phoenix; parking nearby."
+          }
+        ],
+        "notes": "Geological displays; cool and calm inside."
+      },
+      "reviews": [
+        {
+          "source": "Google Reviews",
+          "url": "https://www.google.com/maps/place/caverne+hirondelle/@-20.3194773,57.4770405,17z/data=!3m1!4b1!4m6!3m5!1s0x217c5cdbf816480f:0x7bdef30d23de5d92!8m2!3d-20.3194823!4d57.4796154!16s%2Fg%2F11dzw53md5?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D",
+          "rating": "3.8/5",
+          "reviewCount": 25,
+          "summary": "Highlights cave formations and geological wonders of Mauritius, set in a serene nature-filled museum."
+        }
+      ],
+      "additional_info": {
+        "notes": "Excellent for education and science enthusiasts.",
+        "advisories": {
+          "safety": "Slippery surfaces inside; wear proper shoes.",
+          "travel": "Best accessed by private transport."
+        }
+      },
+      "sub_attractions": []
+    },
+    {
+      "id": "attraction_midlands_dam_view_point",
+      "name": "Midlands Dam View Point",
+      "attraction_type": "viewpoint",
+      "description": "Elevated viewpoint overlooking a tranquil reservoir in Dubreuil, offering stunning views over the Midlands landscapes—great for photography and picnics.",
+      "tags": ["viewpoint", "reservoir", "scenic", "nature"],
+      "audience_popularity": {
+        "locals": "moderate",
+        "tourists": "low"
+      },
+      "location": {
+        "address": "Dubreuil, Midlands, Mauritius",
+        "latitude": -20.320,
+        "longitude": 57.530,
+        "region": "East – Midlands"
+      },
+      "prerequisites": {
+        "tour_guide_required": false,
+        "booking_required": false,
+        "fee_required": false,
+        "entry_points": [
+          {
+            "name": "Viewpoint Access Road",
+            "latitude": -20.320,
+            "longitude": 57.530,
+            "access_notes": "Accessible via M4; parking available at site."
+          }
+        ],
+        "notes": "Ideal for sunrise/sunset photography and relaxed walks."
+      },
+      "reviews": [
+        {
+          "source": "Google Reviews",
+          "url": "https://www.google.com/maps/place/Midlands+Dam/@-20.3215379,57.579013,15z/data=!3m1!4b1!4m6!3m5!1s0x217c5edb77e848c3:0xe413369f2e3c19c9!8m2!3d-20.3245457!4d57.5900846!16s%2Fg%2F11c264dy5j?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D",
+          "rating": "4.4/5",
+          "reviewCount": 132,
+          "summary": "Breathtaking landscapes and tranquil waters; perfect spot for sunrise, picnics, and photography."
+        }
+      ],
+      "additional_info": {
+        "notes": "Bring a picnic and camera for stunning views.",
+        "advisories": {
+          "safety": "Edge of viewpoint may be unguarded; mind your step.",
+          "travel": "Best visited by car."
+        }
+      },
+      "sub_attractions": []
+    }     
+    ]
+  }
+  
