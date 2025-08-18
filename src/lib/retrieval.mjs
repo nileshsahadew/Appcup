@@ -1,7 +1,7 @@
 import { Qdrant } from "qdrant";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const COLLECTION_NAME = "travel_docs";
+const COLLECTION_NAME = "mauritius_knowledge";
 const QDRANT_URL = "http://localhost:6333/";
 
 function assertEnv() {

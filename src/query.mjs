@@ -13,7 +13,7 @@ const genAI = new GoogleGenerativeAI(KEY);
 const embeddingModel = genAI.getGenerativeModel({ model: "models/embedding-001" });
 
 const client = new Qdrant("http://localhost:6333/");
-const COLLECTION_NAME = "travel_docs";
+const COLLECTION_NAME = "mauritius_knowledge";
 
 async function embedText(text) {
   const embedResp = await embeddingModel.embedContent(text);
