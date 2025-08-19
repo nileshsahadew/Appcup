@@ -65,8 +65,12 @@ async function queryCollection(queryText) {
     console.log(`✅ Found ${hits.length} results.\n`);
     
     if (hits.length === 0) {
-      console.log("❌ No results found for this query from Qdrant. Falling back to local embeddings if available...\n");
-      await queryLocalEmbeddings(queryText);
+      console.log("❌ No dense results. Trying payload text filter with indexed 'content'...\n");
+      const filtered = await textFilterSearch(queryText, 10);
+      if (!filtered || filtered.length === 0) {
+        console.log("❌ No results from text filter. Falling back to local embeddings if available...\n");
+        await queryLocalEmbeddings(queryText);
+      }
       return;
     }
     
@@ -105,6 +109,100 @@ async function ensureCollectionExists() {
     console.error(`❌ Collection "${COLLECTION_NAME}" not found at ${QDRANT_URL}.`);
     console.error("   Run ingestion first: npm run ingest-qdrant");
     return false;
+  }
+}
+
+async function getPointCount() {
+  try {
+    const res = await qdrantRequest(
+      "POST",
+      `/collections/${encodeURIComponent(COLLECTION_NAME)}/points/count`,
+      { exact: false }
+    );
+    const count = res?.result?.count ?? 0;
+    return Number(count) || 0;
+  } catch (e) {
+    console.log("ℹ️ Could not retrieve point count:", e?.message || e);
+    return 0;
+  }
+}
+
+// ---------- Qdrant REST helpers for payload indexing and text filter ----------
+async function qdrantRequest(method, pathSuffix, body) {
+  const url = new URL(pathSuffix, QDRANT_URL).toString();
+  const res = await fetch(url, {
+    method,
+    headers: { "Content-Type": "application/json" },
+    body: body ? JSON.stringify(body) : undefined,
+  });
+  if (!res.ok) {
+    const txt = await res.text().catch(() => "");
+    throw new Error(`Qdrant ${method} ${url} failed: ${res.status} ${txt}`);
+  }
+  return res.json().catch(() => undefined);
+}
+
+async function ensureTextIndex(fieldName = "content") {
+  try {
+    await qdrantRequest(
+      "PUT",
+      `/collections/${encodeURIComponent(COLLECTION_NAME)}/index`,
+      {
+        field_name: fieldName,
+        field_schema: {
+          type: "text",
+          tokenizer: "word",
+          lowercase: true,
+        },
+      }
+    );
+    console.log(`🔠 Text index ensured on field '${fieldName}'.`);
+  } catch (e) {
+    // Index may already exist; ignore specific conflict errors
+    console.log(`ℹ️ Text index ensure on '${fieldName}': ${e.message}`);
+  }
+}
+
+async function textFilterSearch(queryText, limit = 10) {
+  try {
+    await ensureTextIndex("content");
+    const resp = await qdrantRequest(
+      "POST",
+      `/collections/${encodeURIComponent(COLLECTION_NAME)}/points/scroll`,
+      {
+        filter: {
+          must: [
+            {
+              key: "content",
+              match: { text: queryText },
+            },
+          ],
+        },
+        limit,
+        with_payload: true,
+      }
+    );
+    const points = Array.isArray(resp?.result?.points)
+      ? resp.result.points
+      : [];
+
+    console.log(`✅ Found ${points.length} results via text filter.\n`);
+    points.forEach((p, i) => {
+      const payload = p?.payload || {};
+      console.log(`\n${"🧾".repeat(i + 1)} FILTER RESULT ${i + 1} ${"🧾".repeat(i + 1)}`);
+      if (payload?.title) console.log(`🧭 Title: ${payload.title}`);
+      if (payload?.type) console.log(`🏷️ Type: ${payload.type}`);
+      if (payload?.source_file) console.log(`📁 Source: ${payload.source_file}`);
+      if (payload?.region) console.log(`🗺️ Region: ${payload.region}`);
+      console.log("─".repeat(40));
+      console.log(payload?.content || payload?.document || payload?.text || JSON.stringify(payload, null, 2));
+      console.log("─".repeat(40));
+    });
+
+    return points;
+  } catch (err) {
+    console.log("❌ Text filter search error:", err?.message || err);
+    return [];
   }
 }
 
@@ -181,6 +279,12 @@ async function main() {
     const exists = await ensureCollectionExists();
     if (!exists) {
       process.exit(1);
+    }
+
+    const count = await getPointCount();
+    console.log(`📦 Points in collection: ${count}`);
+    if (count === 0) {
+      console.log("❗ Collection is empty. Run: npm run ingest-qdrant, then retry.");
     }
 
     if (argQuery) {
