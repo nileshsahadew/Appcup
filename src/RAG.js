@@ -36,14 +36,27 @@ async function queryCollection(queryText) {
     const queryVector = embedResp.embedding.values;
 
     // Search the Qdrant collection for similar vectors
-    const { err, response } = await client.search_collection(
-      COLLECTION_NAME,
-      queryVector,
-      5
-    );
-
-    if (err) {
-      throw new Error(typeof err === "string" ? err : JSON.stringify(err));
+    // Prefer an options-object signature to force with_payload, fallback to older signature
+    let response;
+    try {
+      const res1 = await client.search_collection(COLLECTION_NAME, {
+        vector: queryVector,
+        limit: 5,
+        with_payload: true,
+      });
+      // Some clients return { result }, others return { response: { result } }
+      response = res1?.response ?? res1;
+    } catch (sig1Error) {
+      // Fallback to legacy signature (collection, vector, limit)
+      const { err, response: legacyResp } = await client.search_collection(
+        COLLECTION_NAME,
+        queryVector,
+        5
+      );
+      if (err) {
+        throw new Error(typeof err === "string" ? err : JSON.stringify(err));
+      }
+      response = legacyResp;
     }
 
     const hits = response?.result || [];
@@ -57,14 +70,15 @@ async function queryCollection(queryText) {
     hits.forEach((result, index) => {
       console.log(`\n${"🎯".repeat(index + 1)} RESULT ${index + 1} ${"🎯".repeat(index + 1)}`);
       console.log(`📊 Relevance Score: ${(result.score * 100).toFixed(1)}%`);
-      console.log(`🏷️ Type: ${result.payload?.type || 'Unknown'}`);
-      console.log(`📁 Source: ${result.payload?.source_file || 'Unknown'}`);
-      if (result.payload?.region) {
-        console.log(`🗺️ Region: ${result.payload.region}`);
+      const payload = result?.payload || result?.payloads || result?.data || {};
+      console.log(`🏷️ Type: ${payload?.type || 'Unknown'}`);
+      console.log(`📁 Source: ${payload?.source_file || 'Unknown'}`);
+      if (payload?.region) {
+        console.log(`🗺️ Region: ${payload.region}`);
       }
       console.log(`\n📄 ATTRACTION DETAILS:`);
       console.log("─".repeat(40));
-      console.log(result.payload?.content || 'No content available');
+      console.log(payload?.content || payload?.text || payload?.document || 'No content available');
       console.log("─".repeat(40));
     });
   } catch (error) {
