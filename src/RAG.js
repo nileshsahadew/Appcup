@@ -36,17 +36,30 @@ async function queryCollection(queryText) {
     const embedResp = await embeddingModel.embedContent(queryText);
     const queryVector = embedResp.embedding.values;
 
-    // Use the known-working signature for this client: (collection, vector, limit)
-    const { err, response } = await client.search_collection(
-      COLLECTION_NAME,
-      queryVector,
-      5
-    );
-    if (err) {
-      throw new Error(typeof err === "string" ? err : JSON.stringify(err));
+    // Prefer the options signature to request payloads explicitly
+    let normalized;
+    try {
+      const res = await client.search_collection(COLLECTION_NAME, {
+        vector: queryVector,
+        limit: 5,
+        with_payload: true,
+        with_vector: false,
+      });
+      normalized = res?.response ?? res; // some clients wrap under .response
+    } catch (_e) {
+      // Fallback to legacy positional signature
+      const { err, response } = await client.search_collection(
+        COLLECTION_NAME,
+        queryVector,
+        5
+      );
+      if (err) {
+        throw new Error(typeof err === "string" ? err : JSON.stringify(err));
+      }
+      normalized = response;
     }
 
-    const hits = response?.result || [];
+    const hits = Array.isArray(normalized?.result) ? normalized.result : (Array.isArray(normalized) ? normalized : []);
     console.log(`✅ Found ${hits.length} results.\n`);
     
     if (hits.length === 0) {
@@ -57,7 +70,13 @@ async function queryCollection(queryText) {
     hits.forEach((result, index) => {
       console.log(`\n${"🎯".repeat(index + 1)} RESULT ${index + 1} ${"🎯".repeat(index + 1)}`);
       console.log(`📊 Relevance Score: ${(result.score * 100).toFixed(1)}%`);
-      const payload = result?.payload || {};
+      const payload =
+        result?.payload ??
+        result?.payloads ??
+        result?.point?.payload ??
+        result?.data?.payload ??
+        result?.record?.payload ??
+        {};
       if (payload?.title) console.log(`🧭 Title: ${payload.title}`);
       console.log(`🏷️ Type: ${payload?.type || 'Unknown'}`);
       console.log(`📁 Source: ${payload?.source_file || 'Unknown'}`);
@@ -66,7 +85,8 @@ async function queryCollection(queryText) {
       }
       console.log(`\n📄 ATTRACTION DETAILS:`);
       console.log("─".repeat(40));
-      console.log(payload?.content || 'No content available');
+      const details = payload?.content ?? payload?.document ?? payload?.text ?? payload?.body;
+      console.log(details || JSON.stringify(payload, null, 2) || 'No content available');
       console.log("─".repeat(40));
     });
   } catch (error) {
