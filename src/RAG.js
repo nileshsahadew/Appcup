@@ -1,3 +1,5 @@
+import fs from "fs";
+import path from "path";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -18,8 +20,8 @@ const embeddingModel = genAI.getGenerativeModel({ model: "models/embedding-001" 
 const QDRANT_URL = process.env.QDRANT_URL || "http://localhost:6333/";
 const client = new Qdrant(QDRANT_URL);
 
-// Use the same collection name as other files
-const COLLECTION_NAME = "mauritius_knowledge";
+// Use the same collection name as other files (allow override via env)
+const COLLECTION_NAME = process.env.QDRANT_COLLECTION_NAME || "mauritius_knowledge";
 
 // Ingest helpers removed — this file only performs queries now.
 
@@ -63,7 +65,8 @@ async function queryCollection(queryText) {
     console.log(`✅ Found ${hits.length} results.\n`);
     
     if (hits.length === 0) {
-      console.log("❌ No results found for this query.");
+      console.log("❌ No results found for this query from Qdrant. Falling back to local embeddings if available...\n");
+      await queryLocalEmbeddings(queryText);
       return;
     }
     
@@ -102,6 +105,65 @@ async function ensureCollectionExists() {
     console.error(`❌ Collection "${COLLECTION_NAME}" not found at ${QDRANT_URL}.`);
     console.error("   Run ingestion first: npm run ingest-qdrant");
     return false;
+  }
+}
+
+// ---------- Local embeddings fallback (no Qdrant required) ----------
+function loadLocalEmbeddings() {
+  try {
+    const embeddingsDir = path.join(process.cwd(), "embeddings");
+    const allEmbeddingsPath = path.join(embeddingsDir, "all_embeddings.json");
+    if (!fs.existsSync(allEmbeddingsPath)) {
+      return null;
+    }
+    const data = JSON.parse(fs.readFileSync(allEmbeddingsPath, "utf-8"));
+    return Array.isArray(data) ? data : null;
+  } catch {
+    return null;
+  }
+}
+
+function cosineSimilarity(vecA, vecB) {
+  const dot = vecA.reduce((sum, a, i) => sum + a * (vecB[i] ?? 0), 0);
+  const magA = Math.sqrt(vecA.reduce((s, a) => s + a * a, 0));
+  const magB = Math.sqrt(vecB.reduce((s, b) => s + b * b, 0));
+  if (!magA || !magB) return 0;
+  return dot / (magA * magB);
+}
+
+async function queryLocalEmbeddings(queryText, topK = 5) {
+  const local = loadLocalEmbeddings();
+  if (!local) {
+    console.log("ℹ️ No local embeddings found at embeddings/all_embeddings.json. Skipping local fallback.");
+    return;
+  }
+
+  try {
+    const embedResp = await embeddingModel.embedContent(queryText);
+    const queryVector = embedResp.embedding.values;
+    const ranked = local
+      .map((e, i) => ({ i, score: cosineSimilarity(queryVector, e.embedding), e }))
+      .sort((a, b) => b.score - a.score)
+      .slice(0, topK);
+
+    if (ranked.length === 0) {
+      console.log("❌ No results found in local embeddings.");
+      return;
+    }
+
+    console.log(`✅ Found ${ranked.length} local results.\n`);
+    ranked.forEach((r, idx) => {
+      console.log(`\n${"📄".repeat(idx + 1)} LOCAL RESULT ${idx + 1} ${"📄".repeat(idx + 1)}`);
+      console.log(`📊 Similarity: ${(r.score * 100).toFixed(1)}%`);
+      console.log("─".repeat(40));
+      console.log(r.e.document);
+      console.log("─".repeat(40));
+      if (r.e.metadata) {
+        console.log("📝 Metadata:", JSON.stringify(r.e.metadata));
+      }
+    });
+  } catch (err) {
+    console.log("❌ Local fallback error:", err?.message || err);
   }
 }
 
