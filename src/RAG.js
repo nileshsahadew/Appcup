@@ -48,22 +48,59 @@ function chunkText(text, chunkSize = 300, overlap = 50) {
  */
 function buildAttractionText(attraction) {
   const parts = [];
-  if (attraction.name) parts.push(`Name: ${attraction.name}`);
+  
+  // Basic information
+  if (attraction.name) parts.push(`🏖️ **${attraction.name}**`);
   if (attraction.attraction_type) parts.push(`Type: ${attraction.attraction_type}`);
   if (attraction.description) parts.push(`Description: ${attraction.description}`);
-  if (Array.isArray(attraction.tags) && attraction.tags.length) parts.push(`Tags: ${attraction.tags.join(", ")}`);
+  
+  // Tags
+  if (Array.isArray(attraction.tags) && attraction.tags.length) {
+    parts.push(`Tags: ${attraction.tags.join(", ")}`);
+  }
+  
+  // Location details
   const loc = attraction.location || {};
   const region = loc.region || (loc.Region || undefined);
   const addr = loc.address || undefined;
-  if (addr || region) parts.push(`Location: ${[addr, region].filter(Boolean).join(" | ")}`);
+  if (addr || region) {
+    parts.push(`📍 Location: ${[addr, region].filter(Boolean).join(" | ")}`);
+  }
+  
+  // Prerequisites and access
+  const prereq = attraction.prerequisites || {};
+  if (prereq.booking_required) parts.push(`📅 Booking Required: Yes`);
+  if (prereq.fee_required) parts.push(`💰 Entry Fee: Required`);
+  if (prereq.notes) parts.push(`ℹ️ Access Notes: ${prereq.notes}`);
+  
+  // Reviews and ratings
   const reviews = Array.isArray(attraction.reviews) ? attraction.reviews : [];
   if (reviews.length) {
     const r0 = reviews[0];
-    const summary = r0?.summary ? ` ${r0.summary}` : "";
-    parts.push(`Reviews: ${r0?.source || ""} ${r0?.rating || ""} (${r0?.reviewCount ?? "n/a"} reviews).${summary}`.trim());
+    const summary = r0?.summary ? `\n  Summary: ${r0.summary}` : "";
+    parts.push(`⭐ Reviews: ${r0?.source || ""} ${r0?.rating || ""} (${r0?.reviewCount ?? "n/a"} reviews)${summary}`);
   }
+  
+  // Additional information
   const info = attraction.additional_info || {};
-  if (info?.notes) parts.push(`Notes: ${info.notes}`);
+  if (info?.notes) parts.push(`📝 Notes: ${info.notes}`);
+  
+  // Safety advisories
+  if (info?.advisories) {
+    const adv = info.advisories;
+    if (adv.safety) parts.push(`⚠️ Safety: ${adv.safety}`);
+    if (adv.travel) parts.push(`🚗 Travel: ${adv.travel}`);
+  }
+  
+  // Popularity
+  const pop = attraction.audience_popularity || {};
+  if (pop.locals || pop.tourists) {
+    const popularity = [];
+    if (pop.locals) popularity.push(`Locals: ${pop.locals}`);
+    if (pop.tourists) popularity.push(`Tourists: ${pop.tourists}`);
+    parts.push(`👥 Popularity: ${popularity.join(", ")}`);
+  }
+  
   return parts.join("\n");
 }
 
@@ -109,6 +146,7 @@ async function createCollection() {
  */
 async function queryCollection(queryText) {
   console.log(`\n🔍 Searching for: "${queryText}"`);
+  console.log("-".repeat(50));
 
   try {
     // Generate an embedding for the query text
@@ -127,14 +165,25 @@ async function queryCollection(queryText) {
     }
 
     const hits = response?.result || [];
-    console.log(`✅ Found ${hits.length} results.`);
+    console.log(`✅ Found ${hits.length} results.\n`);
+    
+    if (hits.length === 0) {
+      console.log("❌ No results found for this query.");
+      return;
+    }
     
     hits.forEach((result, index) => {
-      console.log(`\n--- Result ${index + 1} ---`);
-      console.log(`Score: ${result.score}`);
-      console.log(`Title: ${result.payload?.title || 'No title'}`);
-      console.log(`Content: ${result.payload?.content || 'No content'}`);
-      console.log(`Document ID: ${result.payload?.document_id || 'No ID'}`);
+      console.log(`\n${"🎯".repeat(index + 1)} RESULT ${index + 1} ${"🎯".repeat(index + 1)}`);
+      console.log(`📊 Relevance Score: ${(result.score * 100).toFixed(1)}%`);
+      console.log(`🏷️ Type: ${result.payload?.type || 'Unknown'}`);
+      console.log(`📁 Source: ${result.payload?.source_file || 'Unknown'}`);
+      if (result.payload?.region) {
+        console.log(`🗺️ Region: ${result.payload.region}`);
+      }
+      console.log(`\n📄 ATTRACTION DETAILS:`);
+      console.log("─".repeat(40));
+      console.log(result.payload?.content || 'No content available');
+      console.log("─".repeat(40));
     });
   } catch (error) {
     console.error("❌ Error during query:", error);
@@ -260,11 +309,15 @@ async function main() {
     console.log("✅ Data ingestion complete.\n");
 
     // Perform queries
-    await queryCollection("What are the best beaches in Mauritius?");
-    await queryCollection(
-      "Tell me about the Black River Gorges National Park."
-    );
-    await queryCollection("What historical places can I visit?");
+    console.log("\n" + "=".repeat(60));
+    console.log("🔍 TESTING QUERIES");
+    console.log("=".repeat(60));
+    
+    await queryCollection("best beaches in Mauritius");
+    await queryCollection("water sports and snorkeling");
+    await queryCollection("Black River Gorges National Park");
+    await queryCollection("historical places and museums");
+    await queryCollection("family friendly attractions");
 
     process.exit(0);
   } catch (error) {
