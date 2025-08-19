@@ -38,8 +38,9 @@ async function search(query, k = 3) {
     console.log(`\nResult ${i + 1}:`);
     console.log("Score:", hit.score);
     if (hit.payload) {
-      console.log("Title:", hit.payload.title);
-      console.log("Chunk:", hit.payload.content);
+      console.log(hit);
+      //console.log("Title:", hit.payload.title);
+      //console.log("Chunk:", hit.payload.content);
       console.log("Meta:", {
         chunk_index: hit.payload.chunk_index,
         document_id: hit.payload.document_id,
