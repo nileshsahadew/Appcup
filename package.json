@@ -10,12 +10,15 @@
     "ingest": "node src/ingest_local.mjs",
     "ingest-qdrant": "node src/ingest.mjs",
     "ingest-local": "node src/ingest_local.mjs",
-    "query": "node src/query.mjs"
+    "query": "node src/query.mjs",
+    "rag": "node src/RAG.js"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@google/generative-ai": "^0.24.1",
+    "@langchain/core": "^0.3.0",
+    "@langchain/google-genai": "^0.2.0",
     "@mui/icons-material": "^7.3.1",
     "@mui/material": "^7.3.1",
     "@mui/styled-engine-sc": "^7.3.1",
