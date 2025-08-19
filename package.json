@@ -2,6 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -11,7 +12,8 @@
     "ingest-qdrant": "node src/ingest.mjs",
     "ingest-local": "node src/ingest_local.mjs",
     "query": "node src/query.mjs",
-    "rag": "node src/RAG.js"
+    "rag": "node src/RAG.js",
+    "test-rag": "node src/test_rag.js"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
